@@ -8,7 +8,7 @@ class Withdraw extends React.Component {
   }
 
   render() {
-    return <div>Withdraw Component: {this.drizzleState.accounts[0]}</div>;
+    return <div>Withdraw Component: </div>;
   }
 }
 
