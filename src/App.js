@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Withdraw from './Withdraw';
 
 class App extends Component {
   
@@ -31,7 +32,14 @@ class App extends Component {
 
   render() {
     if (this.state.loading) return "Loading Drizzle...";
-    return <div className="App">Drizzle is ready</div>;
+    return (
+      <div className="App">
+        <Withdraw
+          drizzle = {this.props.drizzle}
+          drizzleState={this.state.drizzleState}
+          />
+      </div>
+    );
   }
 }
 
