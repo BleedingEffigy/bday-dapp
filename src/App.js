@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  state = { loading: true, drizzleState: null };
+  
+  constructor(props){
+    super(props);
+    this.state = { loading: true, drizzleState: null };
+  }
+
   componentDidMount() {
     const { drizzle } = this.props;
 
