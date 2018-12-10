@@ -3,7 +3,7 @@ import './App.css';
 import Withdraw from './Withdraw';
 
 class App extends Component {
-  
+
   constructor(props){
     super(props);
     this.state = { loading: true, drizzleState: null };
@@ -31,13 +31,16 @@ class App extends Component {
 
 
   render() {
-    if (this.state.loading) return "Loading Drizzle...";
+    if (this.state.loading) return <div class="No-app">"Loading Drizzle..."</div>
     return (
-      <div className="App">
+      <div className="App hero is-fullheight">
+        <div className="hero-head">
+        </div>
         <Withdraw
           drizzle = {this.props.drizzle}
           drizzleState={this.state.drizzleState}
           />
+        <div className="hero-feet"></div>
       </div>
     );
   }

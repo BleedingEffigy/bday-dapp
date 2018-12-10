@@ -9,13 +9,11 @@ class Withdraw extends React.Component {
   }
   componentDidMount() {
     const { drizzle, drizzleState } = this.props;
-    console.log(drizzle);
-    console.log(drizzleState);
     this.setState({address: drizzleState.accounts[0]});
   }
 
   render() {
-    return <div>Withdraw Component: {this.state.address}</div>;
+    return <div className="hero-body">Withdraw Component: {this.state.address}</div>;
   }
 }
 
